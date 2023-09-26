@@ -26,7 +26,7 @@ jobs:
           # Label requiring a response
           responseRequiredLabel: 'status: waiting for follow-up'
           # Comment to post when closing an Issue for lack of response. Set to `false` to disable
-          optionalFollowupLabel: 'status: waiting for maintainer response'
+          optionalFollowupLabel: 'status: waiting for maintainer\'s response'
           closeComment: >
             The issue has been inactive for 7 days and has been automatically closed.
             If you think that it has been incorrectly closed, please reopen it and provide missing information (if any) or continue the last discussion.
