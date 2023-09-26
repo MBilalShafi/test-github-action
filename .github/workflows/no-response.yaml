@@ -18,7 +18,7 @@ jobs:
       contents: read
       issues: write
     steps:
-      - uses: lee-dohm/no-response@9bb0a4b5e6a45046f00353d5de7d90fb8bd773bb
+      - uses: MBilalShafi/no-response-add-label@4136f5468a46f974fc6b336be523f3bcda5d6f94
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # Number of days of inactivity before an Issue is closed for lack of response
