@@ -2,7 +2,7 @@ name: Run when an issue is closed and log the output
 
 on:
   issues:
-    types: [closed]
+    types: [closed, reopened]
 
 jobs:
   add-tag:
@@ -10,5 +10,6 @@ jobs:
     
     steps:
       - name: "log stuff"
+        if: ${{ github.event_name == "issues" && github.event.action == "reopened" }}
         run: echo '${{ toJSON(github) }}' | jq
         shell: bash
