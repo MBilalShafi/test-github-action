@@ -1,0 +1,13 @@
+name: Run a workflow everytime a comment is dropped on an issue
+
+on:
+  issues:
+    types: [commented]
+
+jobs:
+  add-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "log stuff"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
