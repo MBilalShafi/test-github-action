@@ -1,8 +1,8 @@
-name: Run a workflow everytime a comment is dropped on an issue
+name: Run a workflow every time a comment is dropped on an issue
 
 on:
-  issues:
-    types: [commented]
+  issue_comment:
+    types: [created]
 
 jobs:
   add-tag:
