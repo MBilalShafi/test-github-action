@@ -10,5 +10,5 @@ jobs:
     
     steps:
       - name: "log stuff"
-        run: echo '${{ toJSON(github.event) }}' | jq
+        run: echo '${{ toJSON(github) }}' | jq
         shell: bash
