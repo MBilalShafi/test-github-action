@@ -10,6 +10,6 @@ jobs:
     
     steps:
       - name: "log stuff"
-        if: ${{ github.event_name == "issues" && github.event.action == "reopened" }}
+        if: github.event_name == 'issues' && github.event.action == 'reopened'
         run: echo '${{ toJSON(github) }}' | jq
         shell: bash
