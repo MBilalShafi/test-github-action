@@ -1,12 +1,13 @@
 name: Run a workflow every time a comment is dropped on an issue
 
 on:
-  issue_comment:
-    types: [created]
+  issues:
+    types: [closed]
 
 jobs:
   add-tag:
     runs-on: ubuntu-latest
+    
     steps:
       - name: "log stuff"
         run: echo '${{ toJSON(github.event) }}' | jq
