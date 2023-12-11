@@ -1,8 +1,10 @@
 name: No Response
 
-# Both `issue_comment` and `scheduled` event types are required for this Action
+# `issues`.`closed`, `issue_comment`.`created`, and `scheduled` event types are required for this Action
 # to work properly.
 on:
+  issues:
+    types: [closed]
   issue_comment:
     types: [created]
   schedule:
