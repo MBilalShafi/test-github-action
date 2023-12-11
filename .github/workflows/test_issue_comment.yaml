@@ -1,4 +1,4 @@
-name: Run a workflow every time a comment is dropped on an issue
+name: Run when an issue is closed and log the output
 
 on:
   issues:
