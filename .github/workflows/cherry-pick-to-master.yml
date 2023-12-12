@@ -1,0 +1,26 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types: ["closed"]
+
+jobs:
+  cherry_pick_release_v1_0:
+    runs-on: ubuntu-latest
+    name: Cherry pick into master
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'needs cherry-pick') && github.event.pull_request.merged == true }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Cherry pick into master
+        uses: carloscastrojumo/github-cherry-pick-action@v1.0.1
+        with:
+          branch: master
+          labels: |
+            cherry-pick
+          reviewers: |
+            MBilalShafi
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
