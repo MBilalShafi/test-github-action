@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Cherry pick into master
-        uses: carloscastrojumo/github-cherry-pick-action@v1.0.1
+        uses: carloscastrojumo/github-cherry-pick-action@v1.0.9
         with:
           branch: master
           token: ${{ secrets.GITHUB_TOKEN }}
