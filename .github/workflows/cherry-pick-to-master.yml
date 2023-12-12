@@ -22,6 +22,7 @@ jobs:
         with:
           branch: master
           token: ${{ secrets.GITHUB_TOKEN }}
+          inherit_labels: false
           labels: |
             cherry-pick
           reviewers: |
