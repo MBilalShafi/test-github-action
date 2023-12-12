@@ -8,6 +8,8 @@ jobs:
   cherry_pick_master:
     runs-on: ubuntu-latest
     name: Cherry pick into master
+    permissions:
+      issues: write
     if: ${{ contains(github.event.pull_request.labels.*.name, 'needs cherry-pick') && github.event.pull_request.merged == true }}
     steps:
       - name: Checkout
