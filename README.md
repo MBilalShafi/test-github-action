@@ -1,3 +1,3 @@
 # test-github-action
 
-This a repo used to do some testing around Github actions
+This is a repo used to do some testing around Github actions.
