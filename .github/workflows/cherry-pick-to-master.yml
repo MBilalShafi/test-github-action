@@ -19,12 +19,10 @@ jobs:
           fetch-depth: 0
       - name: Cherry pick and create the new PR
         uses: carloscastrojumo/github-cherry-pick-action@v1.0.9
-        env:
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
         with:
           branch: master
           body: 'Cherry-pick of #{old_pull_request_id}'
-          cherry-pick-branch: ${{ format('cherry-pick-{0}', $PULL_REQUEST_NUMBER) }} 
+          cherry-pick-branch: ${{ format('cherry-pick-{0}', github.event.number) }} 
           labels: |
             cherry-pick
 env:
