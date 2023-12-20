@@ -10,7 +10,6 @@ jobs:
     name: Cherry pick into master
     permissions:
       pull-requests: write
-      contents: write
     if: ${{ contains(github.event.pull_request.labels.*.name, 'needs cherry-pick') && github.event.pull_request.merged == true }}
     steps:
       - name: Checkout
