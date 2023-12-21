@@ -4,8 +4,7 @@ This is a repo used to do some testing around Github actions.
 
 You will find several commits/PRs/issues which you can just ignore and go ahead. :)
 
-Add something to readme, test addition
+Here's a list of actions tested on this repo
 
-Another one
-
-Let's add another
+- no-response.yml
+- cherry-pick-next-to-master.yml
